@@ -1,0 +1,5 @@
+configmap:
+  client:
+    BASE_URL: "BASE_URL"
+    BNR_URL: "BNR_URL"
+namespaceOverride: namespaceOverridden

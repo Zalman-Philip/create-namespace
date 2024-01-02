@@ -1,0 +1,10 @@
+{{ include "chart.createNamespace" . }}
+{{ $configmap := .Values.configmap.client}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+  namespace: {{ .Values.namespaceOverride | default .Release.Namespace}}
+data:
+  BASE_URL: "{{ $configmap.BASE_URL }}"
+  BNR_URL: "{{ $configmap.BNR_URL }}"
